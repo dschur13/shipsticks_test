@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 
-# Use Mongoid Gem as a document manager/odm
-gem 'mongoid'
+# Use mongomapper for Mongodb 
+gem 'mongo_mapper'
 gem 'bson_ext'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
