@@ -1,0 +1,22 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 14:39:27 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/DanSchur/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0.4ms) admin['$cmd'].find({:isMaster=>1}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 15:07:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/DanSchur/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 17ms (Views: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 15:08:13 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/DanSchur/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0.3ms) admin['$cmd'].find({:isMaster=>1}).limit(-1)
