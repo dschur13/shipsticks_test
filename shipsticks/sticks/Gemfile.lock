@@ -39,6 +39,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bson (1.12.5)
@@ -54,6 +55,13 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
+    devise (3.5.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -78,9 +86,15 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    metaclass (0.0.4)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
+    mm-devise (2.0)
+      devise (>= 1.2)
+      mongo_mapper (>= 0.9.0)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     mongo (1.12.5)
       bson (= 1.12.5)
     mongo_mapper (0.13.1)
@@ -89,8 +103,10 @@ GEM
       mongo (~> 1.8)
       plucky (~> 0.6.5)
     multi_json (1.11.2)
+    nifty-generators (0.4.6)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
     plucky (0.6.6)
       mongo (~> 1.5)
     rack (1.6.4)
@@ -122,6 +138,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (2.99.2)
@@ -147,6 +165,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    shoulda-matchers (3.0.1)
+      activesupport (>= 4.0.0)
     spring (1.6.0)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -166,6 +186,8 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.4)
+      rack (>= 1.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -179,15 +201,20 @@ DEPENDENCIES
   active_model_serializers
   bson_ext
   coffee-rails (~> 4.1.0)
+  devise
   factory_girl_rails
   ffaker
   jbuilder (~> 2.0)
   jquery-rails
-  mongo_mapper
+  mm-devise
+  mocha
+  mongo_mapper (>= 0.13.0.beta2)
+  nifty-generators (~> 0.4.6)
   rails (= 4.2.4)
-  rspec-rails (~> 2.14)
+  rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  shoulda-matchers
   spring
   sqlite3
   turbolinks

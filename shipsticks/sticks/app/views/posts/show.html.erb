@@ -1,0 +1,32 @@
+<% title "Post" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @post.name %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @post.type %>
+</p>
+<p>
+  <strong>Length:</strong>
+  <%= @post.length %>
+</p>
+<p>
+  <strong>Width:</strong>
+  <%= @post.width %>
+</p>
+<p>
+  <strong>Height:</strong>
+  <%= @post.height %>
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @post.weight %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_post_path(@post) %> |
+  <%= link_to "Destroy", @post, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", posts_path %>
+</p>
